@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notebook To-Do</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Welcome Screen -->
+  <div id="welcome-screen">
+    <h1>Today’s To-Do List</h1>
+    <img src="study.gif" alt="Study Vibes" class="study-gif">
+    <p class="click-prompt">Click the mug to begin</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Coffee Mug" id="enter-btn" onclick="enterApp()" />
+  </div>
+
+  <!-- Backdrop -->
+  <div id="backdrop" onclick="toggleApp()"></div>
+
+  <!-- Main To-Do App -->
+  <div class="todo-app" id="todoApp">
+    <div class="top-row">
+      <div class="date-box">
+        <p id="dayName"></p>
+        <div class="circle" id="dateNum"></div>
+        <p id="monthName"></p>
+      </div>
+      <div class="progress-box">
+        <p>Progress <span id="progressPercent">0%</span></p>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-row">
+      <input type="text" id="taskInput" placeholder="Write your task here..." />
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <button class="finish-btn" onclick="finishDay()">FINISH DAY</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
